@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t sozonivka2018/docker-react2 -f Dokerfile.dev .
+
+script:
+  - docker run sozonivka2018/docker-react2 npm run test -- --coverage
