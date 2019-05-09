@@ -11,5 +11,6 @@ RUN npm run build
 #How to use this image
 #Hosting some simple static content
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
